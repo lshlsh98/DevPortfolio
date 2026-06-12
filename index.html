@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backend Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar" id="navbar">
+      <div class="container nav-inner">
+        <a href="#hero" class="nav-logo">Dev<span>Portfolio</span></a>
+        <nav class="nav-menu" id="navMenu">
+          <ul class="nav-list">
+            <li>
+              <a href="#hero" class="nav-link" data-section="hero">Home</a>
+            </li>
+            <li>
+              <a href="#about" class="nav-link" data-section="about">About</a>
+            </li>
+            <li>
+              <a href="#techstack" class="nav-link" data-section="techstack"
+                >Tech</a
+              >
+            </li>
+            <li>
+              <a href="#projects" class="nav-link" data-section="projects"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a href="#contact" class="nav-link" data-section="contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="section hero-section" id="hero">
+      <div class="container hero-content">
+        <p class="hero-sub">안녕하세요</p>
+        <h1
+          class="hero-title"
+          id="heroTitle"
+          aria-label="안정적이고 확장 가능한 백엔드 시스템을 만드는 개발자 이성현입니다."
+        ></h1>
+        <p class="hero-desc">
+          Java &amp; Spring 기반의 백엔드 신입 개발자로,<br />
+          사용자 경험을 빠르고 안정적으로 지원하는 서버를 설계합니다.
+        </p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-outline">Contact</a>
+        </div>
+        <div class="hero-badges">
+          <span class="badge">Java</span>
+          <span class="badge">Spring Boot</span>
+          <span class="badge">MySQL</span>
+          <span class="badge">AWS</span>
+          <span class="badge">Docker</span>
+        </div>
+      </div>
+      <div class="hero-bg-circle circle1"></div>
+      <div class="hero-bg-circle circle2"></div>
+    </section>
+
+    <!-- ===== ABOUT ME ===== -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-sub">저를 소개합니다</p>
+
+        <div class="about-layout">
+          <!-- 왼쪽: 소개 -->
+          <div class="about-intro">
+            <h3 class="about-name">
+              이성현 <span class="about-role">Backend Developer</span>
+            </h3>
+            <div class="about-desc">
+              <p>
+                안녕하세요. Java와 Spring Boot를 기반으로 백엔드 개발을 공부하고
+                있는 신입 개발자 이성현입니다.
+              </p>
+              <p>
+                대학교 재학 중과 학원 수강 과정에서 다양한 팀 프로젝트를
+                경험하며 RESTful API 설계, 데이터베이스 설계, 배포 자동화 등
+                백엔드 개발 역량을 키워왔습니다.
+              </p>
+              <p>
+                코드의 가독성과 유지보수성을 중요하게 생각하며, 협업 과정에서의
+                원활한 소통을 통해 새로운 시각을 배우고 더 나은 해결책을 찾기
+                위해 노력합니다.
+              </p>
+              <p>
+                끊임없는 학습과 도전을 통해 안정적이고 확장 가능한 서비스를
+                개발하는 백엔드 개발자로 성장하고자 합니다.
+              </p>
+            </div>
+          </div>
+
+          <!-- 오른쪽: 탭 카드 -->
+          <div class="about-tab-card">
+            <div class="about-tab-nav" role="tablist">
+              <button class="about-tab-btn active" data-tab="edu" role="tab">
+                학력
+              </button>
+              <button class="about-tab-btn" data-tab="training" role="tab">
+                교육 이수
+              </button>
+              <button class="about-tab-btn" data-tab="cert" role="tab">
+                자격증
+              </button>
+              <button class="about-tab-btn" data-tab="award" role="tab">
+                수상경력
+              </button>
+            </div>
+
+            <!-- 학력 -->
+            <div class="about-tab-panel active" id="tab-edu">
+              <div class="about-table-wrap">
+                <table class="about-table">
+                  <thead>
+                    <tr>
+                      <th>기간</th>
+                      <th>학교명 / 전공</th>
+                      <th>구분</th>
+                      <th>졸업여부</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2023.03 ~ 2026.02</td>
+                      <td>국제대학교 소프트웨어과</td>
+                      <td>3년제</td>
+                      <td>졸업</td>
+                    </tr>
+                    <tr>
+                      <td>2014.03 ~ 2017.02</td>
+                      <td>운천고등학교</td>
+                      <td>고등학교</td>
+                      <td>졸업</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- 교육 이수 -->
+            <div class="about-tab-panel" id="tab-training">
+              <div class="about-table-wrap">
+                <table class="about-table">
+                  <thead>
+                    <tr>
+                      <th>기간</th>
+                      <th>훈련기관</th>
+                      <th>훈련과정</th>
+                      <th>출석률</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2025.12.11 ~ 2026.07.02</td>
+                      <td>KH 정보교육원</td>
+                      <td>프로젝트 기반 AWS 풀스택 웹 개발자 양성</td>
+                      <td>100%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- 자격증 -->
+            <div class="about-tab-panel" id="tab-cert">
+              <div class="about-table-wrap">
+                <table class="about-table">
+                  <thead>
+                    <tr>
+                      <th>취득일</th>
+                      <th>자격증</th>
+                      <th>발급기관</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2025.09.12</td>
+                      <td>정보처리산업기사</td>
+                      <td>한국산업인력공단</td>
+                    </tr>
+                    <tr>
+                      <td>2024.09.20</td>
+                      <td>SQLD</td>
+                      <td>한국데이터산업진흥원</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- 수상경력 -->
+            <div class="about-tab-panel" id="tab-award">
+              <div class="about-table-wrap">
+                <table class="about-table">
+                  <thead>
+                    <tr>
+                      <th>기간</th>
+                      <th>수상명</th>
+                      <th>수상기관</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2025.09 ~ 2025.10</td>
+                      <td>
+                        2025년 8회 ICT 창의융합 캡스톤디자인 경진대회 (장려상)
+                      </td>
+                      <td>대한전자공학회 산업전자소사이어티</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- /about-tab-card -->
+        </div>
+        <!-- /about-layout -->
+      </div>
+    </section>
+
+    <!-- ===== TECH STACK ===== -->
+    <section class="section section-gray" id="techstack">
+      <div class="container">
+        <h2 class="section-title">Tech Stack</h2>
+        <p class="section-sub">사용 기술 스택</p>
+        <div class="tech-grid">
+          <div class="tech-card">
+            <div class="tech-card-header">
+              <span class="tech-icon">🖥️</span>
+              <h3>Frontend</h3>
+            </div>
+            <ul class="tech-list">
+              <li><span class="tech-dot"></span>HTML5 / CSS3</li>
+              <li><span class="tech-dot"></span>JavaScript (ES6+)</li>
+              <li><span class="tech-dot"></span>jQuery</li>
+              <li><span class="tech-dot"></span>React</li>
+            </ul>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-card-header">
+              <span class="tech-icon">⚙️</span>
+              <h3>Backend</h3>
+            </div>
+            <ul class="tech-list">
+              <li><span class="tech-dot"></span>Java 17</li>
+              <li><span class="tech-dot"></span>Spring Boot</li>
+              <li><span class="tech-dot"></span>Spring Security</li>
+              <li><span class="tech-dot"></span>MyBatis</li>
+              <li><span class="tech-dot"></span>WebSocket</li>
+            </ul>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-card-header">
+              <span class="tech-icon">🗃️</span>
+              <h3>Database</h3>
+            </div>
+            <ul class="tech-list">
+              <li><span class="tech-dot"></span>MySQL</li>
+              <li><span class="tech-dot"></span>Oracle</li>
+            </ul>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-card-header">
+              <span class="tech-icon">☁️</span>
+              <h3>Infra (AWS)</h3>
+            </div>
+            <ul class="tech-list">
+              <li><span class="tech-dot"></span>EC2</li>
+              <li><span class="tech-dot"></span>S3</li>
+              <li><span class="tech-dot"></span>RDS</li>
+              <li><span class="tech-dot"></span>CloudFront</li>
+            </ul>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-card-header">
+              <span class="tech-icon">🔧</span>
+              <h3>DevOps</h3>
+            </div>
+            <ul class="tech-list">
+              <li><span class="tech-dot"></span>Docker</li>
+              <li><span class="tech-dot"></span>GitHub Actions</li>
+              <li><span class="tech-dot"></span>CI/CD Pipeline</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-sub">진행한 프로젝트</p>
+        <div class="projects-grid">
+          <div
+            class="project-card"
+            data-title="맛집 리뷰 플랫폼"
+            data-img="img/matgot_thumb.png"
+            data-img-bg="whitesmoke"
+            data-desc="Spring Boot, MyBatis, React 기반으로 RESTful 구조의 맛집 플랫폼을 개발했습니다. 맛집 등록·검색·상세 조회 및 수정/삭제 기능과 리뷰 작성 및 관리, 신고 기능, 영수증 인증 기능을 구현했습니다. 또한 AWS EC2, RDS, S3, CloudFront를 활용하여 서비스 배포를 진행했습니다."
+            data-features="맛집 CRUD 및 검색 기능|맛집·리뷰 좋아요 및 신고 기능|리뷰 CRUD 기능|댓글·대댓글 기능| 영수증 인증 시스템 기능|지도 API 연동 및 위치 정보 관리|AWS S3 파일 업로드·삭제 처리|EC2 + RDS + CloudFront를 활용한 배포"
+            data-github="https://github.com/lshlsh98/matgot-aws"
+            data-demo="https://dqm6km94r8kxi.cloudfront.net/"
+            data-pdf="pdf/matmatgotgot소개서_이성현.pdf"
+          >
+            <div class="project-img" style="background: whitesmoke">
+              <img src="img/matgot_thumb.png" alt="matgot 썸네일" />
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">맛집 리뷰 플랫폼</h3>
+              <div class="project-tags">
+                <span class="tag">Spring Boot</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">MyBatis</span>
+                <span class="tag">React</span>
+                <span class="tag">AWS</span>
+                <span class="tag">Docker</span>
+              </div>
+            </div>
+          </div>
+
+          <!--  -->
+          <!-- <div
+            class="project-card"
+            data-title="BoardHub — 커뮤니티 플랫폼"
+            data-img=""
+            data-img-bg="linear-gradient(135deg,#0f766e,#14b8a6)"
+            data-img-label="📋 BoardHub"
+            data-desc="게시판·댓글·좋아요 기능을 갖춘 커뮤니티 서비스. Spring Security로 권한 관리를 구현하고 AWS EC2 + RDS 환경에 GitHub Actions CI/CD를 연동해 자동 배포했습니다."
+            data-features="게시글 CRUD 및 페이징 처리|댓글·대댓글 기능 구현|좋아요 토글 기능|Spring Security 권한 관리|GitHub Actions CI/CD 자동 배포|AWS EC2 + RDS 인프라 구성"
+            data-github="#"
+            data-demo="#"
+            data-pdf="pdf/boardhub.pdf"
+          >
+            <div
+              class="project-img"
+              style="background: linear-gradient(135deg, #0f766e, #14b8a6)"
+            >
+              <img src="img/boardhub-thumb.jpg" alt="BoardHub 썸네일" />
+              <span class="project-img-label">📋 BoardHub</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">BoardHub — 커뮤니티 플랫폼</h3>
+              <div class="project-tags">
+                <span class="tag">Spring Boot</span>
+                <span class="tag">Spring Security</span>
+                <span class="tag">Oracle</span>
+                <span class="tag">AWS EC2</span>
+                <span class="tag">GitHub Actions</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="project-card"
+            data-title="FileVault — 파일 관리 서비스"
+            data-img=""
+            data-img-bg="linear-gradient(135deg,#7c3aed,#a78bfa)"
+            data-img-label="📁 FileVault"
+            data-desc="AWS S3와 CloudFront를 활용한 파일 업로드·다운로드 서비스. Presigned URL로 안전한 파일 접근을 구현하고 Docker 컨테이너로 일관된 실행 환경을 유지합니다."
+            data-features="AWS S3 파일 업로드·다운로드 구현|Presigned URL 기반 안전한 접근 제어|CloudFront CDN 연동|Docker 컨테이너 환경 구성|파일 메타데이터 DB 관리|다운로드 권한 검증 로직"
+            data-github="#"
+            data-demo="#"
+            data-pdf="pdf/filevault.pdf"
+          >
+            <div
+              class="project-img"
+              style="background: linear-gradient(135deg, #7c3aed, #a78bfa)"
+            >
+              <img src="img/filevault-thumb.jpg" alt="FileVault 썸네일" />
+              <span class="project-img-label">📁 FileVault</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">FileVault — 파일 관리 서비스</h3>
+              <div class="project-tags">
+                <span class="tag">Java</span>
+                <span class="tag">Spring Boot</span>
+                <span class="tag">AWS S3</span>
+                <span class="tag">CloudFront</span>
+                <span class="tag">Docker</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="project-card"
+            data-title="DataDash — 실시간 대시보드"
+            data-img=""
+            data-img-bg="linear-gradient(135deg,#c2410c,#fb923c)"
+            data-img-label="📊 DataDash"
+            data-desc="SSE(Server-Sent Events)를 이용한 실시간 데이터 시각화 대시보드. MyBatis로 복잡한 집계 쿼리를 처리하고 React 프론트엔드와 REST API로 연결했습니다."
+            data-features="SSE 기반 실시간 데이터 스트리밍|MyBatis 집계 쿼리 최적화|React 차트 컴포넌트 연동|REST API 설계 및 구현|실시간 알림 기능|대시보드 필터링·검색"
+            data-github="#"
+            data-demo="#"
+            data-pdf="pdf/datadash.pdf"
+          >
+            <div
+              class="project-img"
+              style="background: linear-gradient(135deg, #c2410c, #fb923c)"
+            >
+              <img src="img/datadash-thumb.jpg" alt="DataDash 썸네일" />
+              <span class="project-img-label">📊 DataDash</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">DataDash — 실시간 대시보드</h3>
+              <div class="project-tags">
+                <span class="tag">Spring Boot</span>
+                <span class="tag">MyBatis</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">SSE</span>
+                <span class="tag">React</span>
+              </div>
+            </div>
+          </div> -->
+          <!--  -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section section-gray" id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-cards">
+          <a href="mailto:lsh980324@naver.com" class="contact-card">
+            <div class="contact-card-icon">✉️</div>
+            <h4>Email</h4>
+            <p>lsh980324@naver.com</p>
+          </a>
+          <a
+            href="https://github.com/lshlsh98"
+            target="_blank"
+            rel="noopener"
+            class="contact-card"
+          >
+            <div class="contact-card-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="40"
+                height="40"
+              >
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.165c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.468-2.38 1.236-3.22-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 013.003-.404c1.02.005 2.047.138 3.003.404 2.29-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.807 5.625-5.479 5.92.43.372.823 1.102.823 2.222v3.293c0 .322.218.694.825.576C20.565 21.796 24 17.298 24 12c0-6.63-5.37-12-12-12z"
+                />
+              </svg>
+            </div>
+            <h4>GitHub</h4>
+            <p>github.com/lshlsh98</p>
+          </a>
+          <a
+            href="https://open.kakao.com/"
+            target="_blank"
+            rel="noopener"
+            class="contact-card"
+          >
+            <div class="contact-card-icon">💬</div>
+            <h4>카카오 오픈채팅</h4>
+            <p>오픈채팅으로 연락하기</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p class="footer-name">이성현</p>
+        <p class="footer-copy">© 2026 이성현. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="https://github.com/lshlsh98" target="_blank" rel="noopener"
+            >GitHub</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===== PROJECT MODAL ===== -->
+    <div
+      class="modal-backdrop"
+      id="projectModal"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div class="modal-box">
+        <button class="modal-close" id="modalClose" aria-label="닫기">✕</button>
+        <div class="modal-thumb" id="modalThumb">
+          <img id="modalImg" src="" alt="" />
+          <span class="project-img-label" id="modalLabel"></span>
+        </div>
+        <div class="modal-content">
+          <h3 class="modal-title" id="modalTitle"></h3>
+          <div class="modal-tags project-tags"></div>
+          <p class="modal-desc" id="modalDesc"></p>
+          <div class="modal-features">
+            <h4 class="modal-features-title">⚙️나의 구현 기능</h4>
+            <ul class="modal-features-list" id="modalFeatures"></ul>
+          </div>
+          <div class="modal-links" id="modalLinks"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
