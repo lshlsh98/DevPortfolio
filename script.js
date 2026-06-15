@@ -137,7 +137,10 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       links.innerHTML += `<a href="#" class="btn btn-sm btn-primary">Live Demo</a>`;
     }
     if (card.dataset.pdf) {
-      links.innerHTML += `<a href="${card.dataset.pdf}" target="_blank" rel="noopener" class="btn btn-sm btn-pdf">📄 PDF</a>`;
+      links.innerHTML += `<a href="${card.dataset.pdf}" target="_blank" rel="noopener" class="btn btn-sm btn-pdf">📄 My Work</a>`;
+    }
+    if (card.dataset.overview) {
+      links.innerHTML += `<a href="${card.dataset.overview}" target="_blank" rel="noopener" class="btn btn-sm btn-overview">📄 Project Overview</a>`;
     }
 
     modal.classList.add("open");
@@ -165,23 +168,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     if (e.key === "Escape") closeModal();
   });
 })();
-
-// ── About tab switching ───────────────────────────
-document.querySelectorAll(".about-tab-btn").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const tab = btn.dataset.tab;
-    btn
-      .closest(".about-tab-card")
-      .querySelectorAll(".about-tab-btn")
-      .forEach((b) => b.classList.remove("active"));
-    btn
-      .closest(".about-tab-card")
-      .querySelectorAll(".about-tab-panel")
-      .forEach((p) => p.classList.remove("active"));
-    btn.classList.add("active");
-    document.getElementById("tab-" + tab).classList.add("active");
-  });
-});
 
 // ── Hero typewriter ───────────────────────────────
 (function () {
